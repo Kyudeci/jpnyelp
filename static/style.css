@@ -1,0 +1,19 @@
+body {
+  background-color: seagreen;
+}
+h1 {
+  border-style: solid;
+  overflow: hidden;
+  text-align: center;
+}
+.menu {
+  width:700px;
+  border-style: solid;
+  margin:0;
+}
+.menu-sm {
+  width:50%;
+  float:left;
+  margin:0;
+  overflow: hidden;
+}

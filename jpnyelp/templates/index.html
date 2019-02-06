@@ -1,10 +1,32 @@
+{% load static %}
 <html>
   <head>
+    <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css">
     <title>Home Page</title>
   </head>
   <body>
     <h1>A Taste of Japan!</h1>
     <p>Welcome! Check out the menu down below!</p>
-    <h2>Menu</h2>
+    <div class="menu">
+      <h2 style="text-align:center">Menu</h2>
+        <div class="menu-sm">
+          <ul style="list-style-type:none" >
+            <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
+            <li>Temaki Sushi (手巻き寿司)</li>
+            <li>Takoyaki (たこ焼き)</li>
+            <li>Omurice (オムライス)</li>
+            <li>Karaage (唐揚げ)</li>
+          </ul>
+        </div>
+        <div class="menu-sm">
+          <ul style="list-style-type:none">
+            <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
+            <li>Temaki Sushi (手巻き寿司)</li>
+            <li>Takoyaki (たこ焼き)</li>
+            <li>Omurice (オムライス)</li>
+            <li>Karaage (唐揚げ)</li>
+          </ul>
+        </div>
+    </div>
   </body>
 </html>
