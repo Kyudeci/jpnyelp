@@ -13,10 +13,15 @@
           <ul style="list-style-type:none" >
             <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
             <h3>Placeholders</h3>
-            <li>Temaki Sushi (手巻き寿司)</li>
+            {% for food in foods.all %}
+
+            {{ food.name }}
+
+            {% endfor %}
+            <!-- <li>Temaki Sushi (手巻き寿司)</li>
             <li>Takoyaki (たこ焼き)</li>
             <li>Omurice (オムライス)</li>
-            <li>Karaage (唐揚げ)</li>
+            <li>Karaage (唐揚げ)</li> -->
           </ul>
         </div>
         <div class="menu-sm">
