@@ -5,7 +5,7 @@ from .models import Food
 # Create your views here.
 def homepage(request):
     foods = Food.objects
-    return render(request, 'food/index.html', {'foods':foods})
+    return render(request, 'jpnyelp/index.html', {'foods':foods})
 
 class HomeView(TemplateView):
-    template_name = 'index.html'
+    template_name = 'jpnyelp/index.html'
