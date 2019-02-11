@@ -13,9 +13,9 @@
           <ul style="list-style-type:none" >
             <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
             <h3>Placeholders</h3>
-            {% for food in foods.all %}
+            {% for food in foods %}
 
-            <li>{{ food.name }}</li>
+            {{ food.name }}
 
             {% endfor %}
             <!-- <li>Temaki Sushi (手巻き寿司)</li>
