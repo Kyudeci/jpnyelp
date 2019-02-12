@@ -12,15 +12,14 @@
         <div class="menu-sm">
           <ul style="list-style-type:none" >
             <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
-            <h3>Placeholders</h3>
-            <div style='background-color: yellow;'>
+            <h3>Appetizers</h3>
 
             {% for food in foods.all %}
 
-            {{ food.name }}
-
+            <li style="color:white">{{ food.name }} ${{ food.price|floatformat:-2 }}</li>
+            <img src="/images/temaki.jpg" alt="">
+            <li style="font-weight:bold">{{ food.description }}</li>
             {% endfor %}
-          </div>
             <!-- <li>Temaki Sushi (手巻き寿司)</li>
             <li>Takoyaki (たこ焼き)</li>
             <li>Omurice (オムライス)</li>
