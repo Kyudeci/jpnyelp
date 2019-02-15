@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
     <title>Home Page</title>
   </head>
-  <body>
+  <body style="background-color:#66ffc4">
     <h1>A Taste of Japan!</h1>
     <p>Welcome! Check out the menu down below!</p>
     <div class="menu">
@@ -13,22 +13,15 @@
           <ul style="list-style-type:none" >
             <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
             <h3>Appetizers</h3>
-
             {% for food in foods.all %}
-
-            <li style="color:white">{{ food.name }} ${{ food.price|floatformat:-2 }}</li>
-            <img src="/images/temaki.jpg" alt="">
-            <li style="font-weight:bold">{{ food.description }}</li>
+              <li style="color:#02075d">{{ food.name }} ${{ food.price|floatformat:-2 }}</li>
+              <img src="/images/temaki.jpg" alt="">
+              <li style="font-weight:bold">{{ food.description }}</li>
             {% endfor %}
-            <!-- <li>Temaki Sushi (手巻き寿司)</li>
-            <li>Takoyaki (たこ焼き)</li>
-            <li>Omurice (オムライス)</li>
-            <li>Karaage (唐揚げ)</li> -->
           </ul>
         </div>
         <div class="menu-sm">
           <ul style="list-style-type:none">
-            <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
             <h3>Placeholder</h3>
             <li>Temaki Sushi (手巻き寿司)</li>
             <li>Takoyaki (たこ焼き)</li>
@@ -38,12 +31,12 @@
         </div>
         <div class="menu-sm">
           <ul style="list-style-type:none">
-            <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
-            <h3>Placeholder</h3>
-            <li>Mochi Ice Cream (もちアイス)</li>
-            <li>Daifuku (大福)</li>
-            <li>Dorayaki Recipe (どら焼き)</li>
-            <li>Coffee Jelly (唐揚げ)</li>
+            <h3>Desserts</h3>
+            {% for dessert in desserts.all %}
+              <li style="color:#ff66cc">{{ dessert.name }} ${{ dessert.price|floatformat:-2 }}</li>
+              <img src="/images/temaki.jpg" alt="">
+              <li style="font-weight:bold">{{ dessert.description }}</li>
+            {% endfor %}
           </ul>
         </div>
     </div>
