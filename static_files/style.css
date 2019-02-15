@@ -1,11 +1,12 @@
+
 h1 {
   border-style: dotted;
   overflow: hidden;
   text-align: center;
 }
 .menu {
-  width:700px;
-  border-style: dashed;
+  width:704px;
+  border-style: solid;
   margin:0;
 }
 .menu-sm {
@@ -13,5 +14,4 @@ h1 {
   float:left;
   margin:0;
   overflow: hidden;
-  border-style:dashed;
 }

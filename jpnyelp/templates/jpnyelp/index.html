@@ -15,7 +15,7 @@
             <h3>Appetizers</h3>
             {% for food in foods.all %}
               <li style="color:#02075d">{{ food.name }} ${{ food.price|floatformat:-2 }}</li>
-              <img src="/images/temaki.jpg" alt="">
+              <img style="width:125px" src="food/{{food.image.url}}" alt="">
               <li style="font-weight:bold">{{ food.description }}</li>
             {% endfor %}
           </ul>

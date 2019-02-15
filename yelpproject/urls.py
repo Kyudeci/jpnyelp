@@ -24,3 +24,4 @@ urlpatterns = [
     path('', jpnyelp.views.homepage, name='homepage'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.FOOD_URL, document_root=settings.FOOD_ROOT)
