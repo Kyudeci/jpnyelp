@@ -1,44 +1,60 @@
 {% load static %}
 <html>
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
     <title>Home Page</title>
   </head>
   <body style="background-color:#66ffc4">
     <h1>A Taste of Japan!</h1>
-    <p>Welcome! Check out the menu down below!</p>
-    <div class="menu">
-      <h2 style="text-align:center">Menu</h2>
-        <div class="menu-sm">
-          <ul style="list-style-type:none" >
-            <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
-            <h3>Appetizers</h3>
-            {% for food in foods.all %}
-              <li style="color:#02075d">{{ food.name }} ${{ food.price|floatformat:-2 }}</li>
-              <img style="width:125px" src="food/{{food.image.url}}" alt="">
-              <li style="font-weight:bold">{{ food.description }}</li>
-            {% endfor %}
-          </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <p style="text-align:center">Welcome! Check out the menu down below!</p>
+          <div class="menu">
+            <h2 style="text-align:center">Menu</h2>
+            <div class="menu-sm">
+              <ul style="list-style-type:none" >
+                <!-- https://www.justonecookbook.com/temaki-sushi-hand-roll/ -->
+                <h3>Appetizers</h3>
+                {% for food in foods.all %}
+                {% if food.id < 4 %}
+                <li style="color:#02075d">{{ food.name }} ${{ food.price|floatformat:-2 }}</li>
+                <img style="width:125px;height:125px" src="food/{{food.image.url}}" alt="">
+                <li style="font-weight:bold">{{ food.description }}</li>
+                <!-- <div class="card" style="width: 18rem;">
+                  <img src="food/{{food.image.url}}" style="height:200px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ food.name }} ${{ food.price|floatformat:-2 }}</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">{{ food.description }}</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                </div> -->
+                {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="menu-sm">
+              <ul style="list-style-type:none">
+                <h3>Desserts</h3>
+                {% for dessert in desserts.all %}
+                {% if dessert.id < 4 %}
+                <li style="color:#ff66cc">{{ dessert.name }} ${{ dessert.price|floatformat:-2 }}</li>
+                <img style="width:125px;height:125px" src="food/{{dessert.image.url}}" alt="">
+                <li style="font-weight:bold">{{ dessert.description }}</li>
+                {% endif %}
+                {% endfor %}
+                <a class="btn btn-info" href="#">See more...</a>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="menu-sm">
-          <ul style="list-style-type:none">
-            <h3>Placeholder</h3>
-            <li>Temaki Sushi (手巻き寿司)</li>
-            <li>Takoyaki (たこ焼き)</li>
-            <li>Omurice (オムライス)</li>
-            <li>Karaage (唐揚げ)</li>
-          </ul>
-        </div>
-        <div class="menu-sm">
-          <ul style="list-style-type:none">
-            <h3>Desserts</h3>
-            {% for dessert in desserts.all %}
-              <li style="color:#ff66cc">{{ dessert.name }} ${{ dessert.price|floatformat:-2 }}</li>
-              <img src="/images/temaki.jpg" alt="">
-              <li style="font-weight:bold">{{ dessert.description }}</li>
-            {% endfor %}
-          </ul>
-        </div>
+        <div class="col-2"></div>
+      </div>
     </div>
   </body>
 </html>

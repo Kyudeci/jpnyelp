@@ -1,13 +1,10 @@
-body {
-  background-color: seagreen;
-}
 h1 {
-  border-style: solid;
+  border-style: dotted;
   overflow: hidden;
   text-align: center;
 }
 .menu {
-  width:700px;
+  width:704px;
   border-style: solid;
   margin:0;
 }
