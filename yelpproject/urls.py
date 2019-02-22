@@ -19,9 +19,13 @@ import jpnyelp.views
 from django.conf import settings
 from django.conf.urls.static import static
 from jpnyelp.views import homepage
+from jpnyelp.views import dessert
+from jpnyelp.views import appetizer
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', jpnyelp.views.homepage, name='homepage'),
+    path('dessert', jpnyelp.views.dessert, name='dessert'),
+    path('appetizers', jpnyelp.views.appetizer, name='appetizers'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.FOOD_URL, document_root=settings.FOOD_ROOT)
